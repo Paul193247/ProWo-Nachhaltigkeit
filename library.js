@@ -151,7 +151,7 @@ export class Grid {
           }
         }
       } else {
-        balance.sell(100);
+        balance.sell(this.dragging.element.cost);
       }
 
       this.dragging = null;
