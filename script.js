@@ -142,7 +142,7 @@ let WindkraftwerkIiui = 0;
         if (i.image.src == "img/Einkaufsstraße.png") EinkaufsstraßeKh = +10;
         if (i.image.src == "img/Krankenhaus.png") KrankenhausWse = +10;
         if (i.image.src == "img/ArbeitsviertelFabrik.png") ArbeitsviertelFabrikAuw = +1;
-        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkAuw = +0,5;
+        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkAuw = +0.5;
         if (i.image.src == "img/Atomkraftwerk.png") AtomkraftwerkAuw = +10;
         if (i.image.src == "img/Krankenhaus.png") KrankenhausAuw = +4;
         if (i.image.src == "img/Casino.png") CasinoAuw = +7;
@@ -152,15 +152,98 @@ let WindkraftwerkIiui = 0;
         if (i.image.src == "img/Supermarkt.png") SupermarktAuw = +4;
         if (i.image.src == "img/PolizeiFeuerwehr.png") PolizeiFeuerwehrAuw = +5;
         if (i.image.src == "img/UBahn.png") UBahnAuw = +4;
-        
+        if (i.image.src == "img/Fabrik.png") FabrikIiui = +6;
+        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkIiui = +6.5;
+        if (i.image.src == "img/Windkraftwerk.png") WindkraftwerkIiui = +7;
+        if (i.image.src == "img/Solarkraftwerk.png") SolarkraftwerkIiui = +8;
+        if (i.image.src == "img/Atomkraftwerk.png") AtomkraftwerkIiui = +8.5;
       
     
         
     
 
       }
-      }
-    }
+      const Kli = {
+        values: [
+          { value: KohlekraftwerkKli, weight: 3.3 },
+          { value: UBahnkli, weight: 3.3 },
+          { value: ParkKli, weight: 3.3 },  
+        ],
+         weight: 12,
+      };
+      const Ka = {
+        values: [
+          { value: CasinoKa, weight: 3.3 },
+          { value: WohnhäuserKa, weight: 3.3 },
+          { value: ArbeitsviertelFabrikKa, weight: 3.3 },
+        ],
+        weight: 11,
+      };
+      const Guw = {
+        values: [
+          { value: KohlekraftwerkGuw, weight: 2.5 },
+          { value: SupermarktGuw, weight: 2.5 },
+          { value: EinkaufsstraßeGuw, weight: 2.5 }, 
+          { value: KrankenhausGuw, weight: 2.5 }, 
+        ],
+        weight: 11,
+      };
+      const Hb = {
+        values: [
+          { value: KindergartenHb, weight: 2.5 },
+          { value: GrundschuleHb, weight: 2.5 },
+          { value: WeiterführendeSchuleHb, weight: 2.5 },
+          { value: UniversitätHb, weight: 2.5 },
+        ],
+        weight: 11,
+      };
+      const Bus = {
+        values: [
+          { value: kohlekraftwerkBus, weight: 2.5 },
+          { value: WindkraftwerkBus, weight: 2.5 },
+          { value: SolarkraftwerkBus, weight: 2.5 },
+          { value: AtomkraftwerkBus, weight: 2.5 },
+        ],
+        weight: 11,
+      };
+      const Kh = {
+        values: [
+          { value: SupermarktKh, weight: 5 },
+          { value: EinkaufsstraßeKh, weight: 5 },
+        ],
+        weight: 11,
+      };
+      const Wse = {
+        values: [{ value: KrankenhausWse, weight: 10 }],
+        weight: 11,
+      };
+      const Auw = {
+        values: [
+          { value: ArbeitsviertelFabrikAuw, weight: 0.9 },
+          { value: KohlekraftwerkAuw, weight: 0.9 },
+          { value: AtomkraftwerkAuw, weight: 0.9 },
+          { value: KrankenhausAuw, weight: 0.9 },
+          { value: CasinoAuw, weight: 0.9 },
+          { value: KindergartenAuw, weight: 0.9 },
+          { value: SchuleAuw, weight: 0.9 },
+          { value: UniversitätAuw, weight: 0.9 },
+          { value: SupermarktAuw, weight: 0.9 },
+          { value: PolizeiFeuerwehrAuw, weight: 0.9 },
+          { value: UBahnAuw, weight: 0.9 },
+        ],
+        weight: 11,
+      };
+      const Iiui = {
+        values: [
+          { value: FabrikIiui, weight: 2 },
+          { value: KohlekraftwerkIiui, weight: 2 },
+          { value: WindkraftwerkIiui, weight: 2 },
+          { value: SolarkraftwerkIiui, weight: 2 },
+          { value: AtomkraftwerkIiui, weight: 2 },
+        ],
+        weight: 11,
+      };
+    
   
   
   
