@@ -49,10 +49,6 @@ let AtomkraftwerkIiui = 0;
 let WindkraftwerkIiui = 0;
 
 
-
-
-
-let
 class Park extends Cell {
   constructor() {
     super("Reihenhäuser.png", "Park", 100);
