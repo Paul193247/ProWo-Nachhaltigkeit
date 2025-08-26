@@ -29,6 +29,7 @@ export class Grid {
 
     this.other_stuff = [];
     this.ctx = this.canvas.getContext("2d");
+    this.ctx.imageSmoothingEnabled = false;
 
     this.mouse_pos = { x: 0, y: 0 };
 
@@ -232,8 +233,9 @@ export class SelectBar {
       nameElement.textContent = optionInstance.name || "Kein Name";
       nameElement.style.marginBottom = "5px";
 
-      optionInstance.image.style.width = width + "px";
-      optionInstance.image.style.height = height + "px";
+      optionInstance.image.width = width;
+      optionInstance.image.height = height;
+      optionInstance.image.style.imageRendering = "pixelated";
       optionInstance.image.style.margin = "0 auto";
       optionInstance.image.draggable = true;
 
