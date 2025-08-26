@@ -69,6 +69,7 @@ class Park extends Cell {
         this.color = "blue";
       },
     });
+
   }
   onclick() {
     this.sidebar.open();
@@ -109,3 +110,24 @@ htmlstuff.add("h2", "Deine Aufgabe:");
 htmlstuff.add("h3", "Baue eine nachhaltige Stadt");
 
 const grid = new Grid([Park, Krankenhaus], balance, 10, 10, 600, 600);
+
+
+
+
+function update_score() {
+  const all_scores = [];
+  for (let g of grid.grid) {
+    for (let i of g) {
+      if (i) all_scores.push(i.score);
+      }
+    }
+  
+  
+  
+score_display.innerHTML = `Score: ${
+ score + all_scores.reduce((acc, val) => acc + val, 0)
+}`;
+balance_display.innerHTML = `Balance: ${balance.balance}`;
+requestAnimationFrame(update_score);
+}
+update_score();
