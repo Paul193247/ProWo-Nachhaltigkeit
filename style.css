@@ -1,3 +1,53 @@
 canvas {
   background-color: gray;
 }
+
+body {
+  font-family: Oswald, Helvetica, Arial;
+  background-color: #6388db;
+  background: linear-gradient(#6388db, #ff7f11);
+}
+
+#Selectbar {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  height: 160px;
+}
+
+#Sidebar {
+  background-color: #d1d42b;
+  height: 400px;
+  position: relative;
+  top: 45%;
+  border-radius: 10px;
+  box-shadow: 4px 3px 11px 4px #000000;
+  padding: 5px;
+}
+
+.bild {
+  margin: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  background-color: #d1d42b;
+  box-shadow: 4px 3px 11px 4px #000000;
+}
+canvas {
+  background-image: url("img/background.png");
+  position: relative;
+  left: 30%;
+}
+
+button {
+  background-color: #d1d5de;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+h1 {
+  font-display: flex;
+  align-items: center;
+}

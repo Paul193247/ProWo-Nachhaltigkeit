@@ -334,7 +334,6 @@ class Kraftwerk extends Cell {
 const htmlstuff = new HTMLStuff();
 
 htmlstuff.add("h1", "Name des Spieles");
-htmlstuff.add("h2", "Deine Aufgabe:");
 
 htmlstuff.add("h3", "Baue eine nachhaltige Stadt");
 

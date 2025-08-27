@@ -221,6 +221,7 @@ export class SelectBar {
     this.div.style.bottom = 0;
     this.div.style.display = "flex";
     this.div.style.gap = "15px";
+    this.div.id = "Selectbar";
     document.body.append(this.div);
 
     for (let OptionClass of this.options) {
@@ -242,6 +243,7 @@ export class SelectBar {
       optionInstance.image.style.imageRendering = "pixelated";
       optionInstance.image.style.margin = "0 auto";
       optionInstance.image.draggable = true;
+      container.classList.add("bild");
 
       optionInstance.image.addEventListener("dragstart", (e) => {
         e.dataTransfer.setData("text/plain", this.options.indexOf(OptionClass));
@@ -316,6 +318,7 @@ export class Sidebar {
   constructor() {
     this.sidebar = document.getElementById("sidebar");
     this.div = document.createElement("div");
+    this.div.id = "Sidebar";
     this.div.append(this._close_button());
   }
   _close_button() {
