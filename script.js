@@ -375,6 +375,7 @@ function update_score() {
   let PlattenbausolarKa = 0;
   let ReihenhäuserKa = 0;
   let WolkenkratzerKa = 0;
+  let HochhausKa = 0;
   let KohlekraftwerkGuw = 0;
   let SupermarktGuw = 0;
   let EinkaufsstraßeGuw = 0;
@@ -395,6 +396,7 @@ function update_score() {
   let AtomkraftwerkAuw = 0;
   let KrankenhausAuw = 0;
   let CasinoAuw = 0;
+  
   let KindergartenAuw = 0;
   let SchuleAuw = 0;
   let UniversitätAuw = 0;
