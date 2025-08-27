@@ -244,12 +244,16 @@ let WindkraftwerkIiui = 0;
         weight: 11,
       };
     
+      const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui];
+      const overallSustainability = weightedGroupSum(groups);
+      
   
   
   
 score_display.innerHTML = `Score: ${
- score + all_scores.reduce((acc, val) => acc + val, 0)
+  overallSustainability.toFixed(2)
 }`;
+
 balance_display.innerHTML = `Balance: ${balance.balance}`;
 requestAnimationFrame(update_score);
 }
