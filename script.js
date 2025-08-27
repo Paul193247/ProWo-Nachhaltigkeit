@@ -185,6 +185,8 @@ class Kindergarten extends Cell {
     super("img/Kindergarten1.png", "Kindergarten", 7000000);
     this.color = "yellow";
     this.sidebar = new Sidebar();
+    this.sidebar.add("h1", { content: "Kindergarten" });
+    this.sidebar.add("div", { content: "Erhöht die Bildung und zufriedenheit der Bürger" });
     this.sidebar.add("button", {
       content: "Upgraden zu Schule für 7 Mio",
       callback: () => {
