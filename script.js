@@ -336,6 +336,10 @@ htmlstuff.add("h2", "Deine Aufgabe:");
 
 htmlstuff.add("h3", "Baue eine nachhaltige Stadt");
 
+const score_display = htmlstuff.add("div", "");
+
+const balance_display = htmlstuff.add("div", "");
+
 const grid = new Grid(
   [
     Park,
@@ -399,46 +403,46 @@ function update_score() {
   for (let g of grid.grid) {
     for (let i of g) {
       if (i) {
-        if (i.image.src == "img/Reihenhäuser.png") WohnhäuserKa = +7;
-        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkKli = -3;
-        if (i.image.src == "img/UBahn.png") UBahnkli = +5;
-        if (i.image.src == "img/Park.png") ParkKli = +7;
-        if (i.image.src == "img/Casino.png") CasinoKa = -2;
+        if (i.image.src == "img/Reihenhäuser.png") WohnhäuserKa += 7;
+        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkKli -= 3;
+        if (i.image.src == "img/UBahn.png") UBahnkli += 5;
+        if (i.image.src == "img/Park.png") ParkKli += 7;
+        if (i.image.src == "img/Casino.png") CasinoKa -= 2;
         if (i.image.src == "img/ArbeitsviertelFabrik.png")
-          ArbeitsviertelFabrikKa = +10;
-        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkGuw = -3;
-        if (i.image.src == "img/Supermarkt.png") SupermarktGuw = +5;
-        if (i.image.src == "img/Einkaufsstraße.png") EinkaufsstraßeGuw = +7;
-        if (i.image.src == "img/Krankenhaus.png") KrankenhausGuw = +10;
-        if (i.image.src == "img/Kindergarten.png") KindergartenHb = +1;
-        if (i.image.src == "img/Grundschule.png") GrundschuleHb = +3;
+          ArbeitsviertelFabrikKa += 10;
+        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkGuw -= 3;
+        if (i.image.src == "img/Supermarkt.png") SupermarktGuw += 5;
+        if (i.image.src == "img/Einkaufsstraße.png") EinkaufsstraßeGuw += 7;
+        if (i.image.src == "img/Krankenhaus.png") KrankenhausGuw += 10;
+        if (i.image.src == "img/Kindergarten.png") KindergartenHb += 1;
+        if (i.image.src == "img/Grundschule.png") GrundschuleHb += 3;
         if (i.image.src == "img/WeiterführendeSchule.png")
-          WeiterführendeSchuleHb = +7;
-        if (i.image.src == "img/Universität.png") UniversitätHb = +10;
-        if (i.image.src == "img/Kohlekraftwerk.png") kohlekraftwerkBus = +1;
-        if (i.image.src == "img/Windkraftwerk.png") WindkraftwerkBus = +5;
-        if (i.image.src == "img/Solarkraftwerk.png") SolarkraftwerkBus = +7;
-        if (i.image.src == "img/Atomkraftwerk.png") AtomkraftwerkBus = +10;
-        if (i.image.src == "img/Supermarkt.png") SupermarktKh = +10;
-        if (i.image.src == "img/Einkaufsstraße.png") EinkaufsstraßeKh = +10;
-        if (i.image.src == "img/Krankenhaus.png") KrankenhausWse = +10;
+          WeiterführendeSchuleHb += 7;
+        if (i.image.src == "img/Universität.png") UniversitätHb += 10;
+        if (i.image.src == "img/Kohlekraftwerk.png") kohlekraftwerkBus += 1;
+        if (i.image.src == "img/Windkraftwerk.png") WindkraftwerkBus += 5;
+        if (i.image.src == "img/Solarkraftwerk.png") SolarkraftwerkBus += 7;
+        if (i.image.src == "img/Atomkraftwerk.png") AtomkraftwerkBus += 10;
+        if (i.image.src == "img/Supermarkt.png") SupermarktKh += 10;
+        if (i.image.src == "img/Einkaufsstraße.png") EinkaufsstraßeKh += 10;
+        if (i.image.src == "img/Krankenhaus.png") KrankenhausWse += 10;
         if (i.image.src == "img/ArbeitsviertelFabrik.png")
-          ArbeitsviertelFabrikAuw = +1;
-        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkAuw = +0.5;
-        if (i.image.src == "img/Atomkraftwerk.png") AtomkraftwerkAuw = +10;
-        if (i.image.src == "img/Krankenhaus.png") KrankenhausAuw = +4;
-        if (i.image.src == "img/Casino.png") CasinoAuw = +7;
-        if (i.image.src == "img/Kindergarten.png") KindergartenAuw = +5;
-        if (i.image.src == "img/Schule.png") SchuleAuw = +5;
-        if (i.image.src == "img/Universität.png") UniversitätAuw = +5;
-        if (i.image.src == "img/Supermarkt.png") SupermarktAuw = +4;
-        if (i.image.src == "img/PolizeiFeuerwehr.png") PolizeiFeuerwehrAuw = +5;
-        if (i.image.src == "img/UBahn.png") UBahnAuw = +4;
-        if (i.image.src == "img/Fabrik.png") FabrikIiui = +6;
-        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkIiui = +6.5;
-        if (i.image.src == "img/Windkraftwerk.png") WindkraftwerkIiui = +7;
-        if (i.image.src == "img/Solarkraftwerk.png") SolarkraftwerkIiui = +8;
-        if (i.image.src == "img/Atomkraftwerk.png") AtomkraftwerkIiui = +8.5;
+          ArbeitsviertelFabrikAuw += 1;
+        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkAuw += 0.5;
+        if (i.image.src == "img/Atomkraftwerk.png") AtomkraftwerkAuw += 10;
+        if (i.image.src == "img/Krankenhaus.png") KrankenhausAuw += 4;
+        if (i.image.src == "img/Casino.png") CasinoAuw += 7;
+        if (i.image.src == "img/Kindergarten.png") KindergartenAuw += 5;
+        if (i.image.src == "img/Schule.png") SchuleAuw += 5;
+        if (i.image.src == "img/Universität.png") UniversitätAuw += 5;
+        if (i.image.src == "img/Supermarkt.png") SupermarktAuw += 4;
+        if (i.image.src == "img/PolizeiFeuerwehr.png") PolizeiFeuerwehrAuw += 5;
+        if (i.image.src == "img/UBahn.png") UBahnAuw += 4;
+        if (i.image.src == "img/Fabrik.png") FabrikIiui += 6;
+        if (i.image.src == "img/Kohlekraftwerk.png") KohlekraftwerkIiui += 6.5;
+        if (i.image.src == "img/Windkraftwerk.png") WindkraftwerkIiui += 7;
+        if (i.image.src == "img/Solarkraftwerk.png") SolarkraftwerkIiui += 8;
+        if (i.image.src == "img/Atomkraftwerk.png") AtomkraftwerkIiui += 8.5;
       }
     }
   }
