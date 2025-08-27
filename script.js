@@ -416,6 +416,7 @@ function update_score() {
         const filename = fullSrc.split("/").pop();
         if (filename == "Haueser1.png") WohnhäuserKa += 7;
         if (filename == "Plattenbau1.png") PlattenbauKa += 8;
+        if (filename == "Plattenbau2.png") PlattenbausolarKa += 9;
         if (filename == "Reihenhäuser.png") ReihenhäuserKa += 8;
         if (filename == "Wolkenkratzer.png") WolkenkratzerKa += 9;
         if (filename == "Kohlekraftwerk1.png") KohlekraftwerkKli -= 3;
