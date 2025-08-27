@@ -16,11 +16,11 @@ class Park extends Cell {
     super("img/park.png", "Park", 900000);
     this.sidebar = new Sidebar();
     this.sidebar.add("button", {
-      content: "Upgraden zu Spielplatz für 250",
+      content: "Upgraden zu Spielplatz für 50 000",
       callback: () => {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
-        if (!balance.buy(250)) return;
-        this.cost += 250;
+        if (!balance.buy(50000)) return;
+        this.cost += 50000  ;
         this.image.src = "img/park upgrade.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
@@ -186,10 +186,10 @@ class Kindergarten extends Cell {
     this.color = "yellow";
     this.sidebar = new Sidebar();
     this.sidebar.add("button", {
-      content: "Upgraden zu Schule für 250",
+      content: "Upgraden zu Schule für 25 Mio",
       callback: () => {
         console.log("dfgsdfd");
-        if (!balance.buy(250)) return;
+        if (!balance.buy(25000000)) return;
         this.cost += 250;
         this.image.src = "img/Schule1.png";
         this.sidebar = new Sidebar();
@@ -282,10 +282,10 @@ class Einkaufsstraße extends Cell {
     super("img/einkaufsstraße.png", "Einkaufsstraße", 70000000);
     this.sidebar = new Sidebar();
     this.sidebar.add("button", {
-      content: "Upgraden zu Shopping Mall für 250",
+      content: "Upgraden zu Shopping Mall für 1.6 Mrd.",
       callback: () => {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
-        if (!balance.buy(250)) return;
+        if (!balance.buy(1600000000)) return;
         this.image.src = "img/einkaufsstraße upgrade.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
