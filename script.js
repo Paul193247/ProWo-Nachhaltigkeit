@@ -372,6 +372,7 @@ function update_score() {
   let WohnhäuserKa = 0;
   let ArbeitsviertelFabrikKa = 0;
   let PlattenbauKa = 0;
+  let PlattenbausolarKa = 0;
   let ReihenhäuserKa = 0;
   let WolkenkratzerKa = 0;
   let KohlekraftwerkGuw = 0;
@@ -401,6 +402,7 @@ function update_score() {
   let PolizeiFeuerwehrAuw = 0;
   let UBahnAuw = 0;
   let EinkaufsstraßeAuw = 0;
+
   let ShoppingcenterAuw = 0;
   let FabrikIiui = 0;
   let KohlekraftwerkIiui = 0;
