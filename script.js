@@ -548,6 +548,12 @@ function update_score() {
 
   score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)}`;
   score_display.innerHTML = `Score:${Kli}`;
+  score_display.innerHTML = `Score:${Ka}`;
+  score_display.innerHTML = `Score:${Guw}`;
+  score_display.innerHTML = `Score:${Hb}`;
+  score_display.innerHTML = `Score:${Bus}`;
+  score_display.innerHTML = `Score:${Kh}`;
+  score_display.innerHTML = `Score:${Auw}`;
   balance_display.innerHTML = `Balance: ${balance.balance}`;
   requestAnimationFrame(update_score);
 }
