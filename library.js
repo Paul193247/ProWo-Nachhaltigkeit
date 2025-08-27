@@ -233,6 +233,10 @@ export class SelectBar {
       nameElement.textContent = optionInstance.name || "Kein Name";
       nameElement.style.marginBottom = "5px";
 
+      const costElement = document.createElement("div");
+      costElement.textContent = optionInstance.cost || "Kein Preis";
+      costElement.style.marginBottom = "5px";
+
       optionInstance.image.width = width;
       optionInstance.image.height = height;
       optionInstance.image.style.imageRendering = "pixelated";
@@ -244,6 +248,7 @@ export class SelectBar {
       });
 
       container.appendChild(nameElement);
+      container.appendChild(costElement);
       container.appendChild(optionInstance.image);
 
       this.div.appendChild(container);
