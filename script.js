@@ -218,31 +218,31 @@ class Häuser extends Cell {
     this.color = "yellow";
     this.sidebar = new Sidebar();
     this.sidebar.add("button", {
-      content: "Upgraden zu Reihenhäuser für ",
+      content: "Upgraden zu Reihenhäuser für 10 Mio",
       callback: () => {
-        if (!balance.buy(250)) return;
+        if (!balance.buy(10000000)) return;
         this.image.src = "img/Reihenhäuser.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("button", {
-          content: "Upgraden zu Plattenbau für 250",
+          content: "Upgraden zu Plattenbau für 1 Mio",
           callback: () => {
             console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
-            if (!balance.buy(250)) return;
+            if (!balance.buy(1000000)) return;
             this.image.src = "img/Plattenbau1.png";
 
             this.sidebar = new Sidebar();
             this.sidebar.add("button", {
-              content: "Upgraden zu Plattenbau mit Solarplatten für 250",
+              content: "Upgraden zu Plattenbau mit Solarplatten für 500 000",
               callback: () => {
                 console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
-                if (!balance.buy(250)) return;
+                if (!balance.buy(500000)) return;
                 this.image.src = "img/Plattenbau2.png";
                 this.sidebar = new Sidebar();
                 this.sidebar.add("button", {
-                  content: "Upgraden zu Wolkenkratzer für 250",
+                  content: "Upgraden zu Wolkenkratzer für 20 Mio",
                   callback: () => {
                     console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
-                    if (!balance.buy(250)) return;
+                    if (!balance.buy(20000000)) return;
                     this.image.src = "img/Wolkenkratzer.png";
                     this.sidebar = new Sidebar();
                     this.sidebar.add("h3", {
@@ -279,13 +279,13 @@ class UBahn extends Cell {
 }
 class Einkaufsstraße extends Cell {
   constructor() {
-    super("img/einkaufsstraße.png", "Einkaufsstraße", 70000000);
+    super("img/einkaufsstraße.png", "Einkaufsstraße", 15000000);
     this.sidebar = new Sidebar();
     this.sidebar.add("button", {
-      content: "Upgraden zu Shopping Mall für 1.6 Mrd.",
+      content: "Upgraden zu Shopping Mall für 20 Mio.",
       callback: () => {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
-        if (!balance.buy(1600000000)) return;
+        if (!balance.buy(20000000)) return;
         this.image.src = "img/einkaufsstraße upgrade.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
@@ -299,20 +299,20 @@ class Einkaufsstraße extends Cell {
 }
 class Kraftwerk extends Cell {
   constructor() {
-    super("img/Kohlekraftwerk1.png", "Kraftwerk", 1200000000);
+    super("img/Kohlekraftwerk1.png", "Kraftwerk", 17000000);
     this.sidebar = new Sidebar();
     this.sidebar.add("button", {
-      content: "Upgraden zu Windkraftwerk für 250",
+      content: "Upgraden zu Windkraftwerk für 15 Mio",
       callback: () => {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
-        if (!balance.buy(250)) return;
+        if (!balance.buy(15000000)) return;
         this.image.src = "img/Windkraftwerk1.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("button", {
-          content: "Upgraden zu Atomkraftwerk für 250",
+          content: "Upgraden zu Atomkraftwerk für 100 Mio",
           callback: () => {
             console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
-            if (!balance.buy(250)) return;
+            if (!balance.buy(100000000)) return;
             this.image.src = "img/Atomkraftwerk.png";
             this.sidebar = new Sidebar();
             this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
