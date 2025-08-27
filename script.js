@@ -21,7 +21,7 @@ class Park extends Cell {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
         if (!balance.buy(250)) return;
         this.cost += 250;
-        this.image.src = "img/park2.png";
+        this.image.src = "img/park upgrade.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
         this.sidebar.open();
@@ -228,7 +228,7 @@ class Häuser extends Cell {
           callback: () => {
             console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
             if (!balance.buy(250)) return;
-            this.image.src = "img/Plattenbau.png";
+            this.image.src = "img/Plattenbau1.png";
 
             this.sidebar = new Sidebar();
             this.sidebar.add("button", {
@@ -243,7 +243,7 @@ class Häuser extends Cell {
                   callback: () => {
                     console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
                     if (!balance.buy(250)) return;
-                    this.image.src = "img/Plattenbau2.png";
+                    this.image.src = "img/Wolkenkratzer.png";
                     this.sidebar = new Sidebar();
                     this.sidebar.add("h3", {
                       content: "Maximale Stufe erreicht",
@@ -268,7 +268,7 @@ class Häuser extends Cell {
 
 class UBahn extends Cell {
   constructor() {
-    super("img/UBahn.png", "U-Bahn", 2000000);
+    super("img/U Bahn.png", "U-Bahn", 2000000);
     this.color = "yellow";
     this.sidebar = new Sidebar();
     this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
@@ -286,7 +286,7 @@ class Einkaufsstraße extends Cell {
       callback: () => {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
         if (!balance.buy(250)) return;
-        this.image.src = "img/einkaufsstraßeupgrade.png";
+        this.image.src = "img/einkaufsstraße upgrade.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
         this.sidebar.open();
