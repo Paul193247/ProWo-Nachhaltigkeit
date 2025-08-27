@@ -545,7 +545,7 @@ function update_score() {
   const overallSustainability = weightedGroupSum(groups);
 
   score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)}`;
-  score_display.innerHTML = `Score:`
+  score_display.innerHTML = `Score:`${Kli}
   balance_display.innerHTML = `Balance: ${balance.balance}`;
   requestAnimationFrame(update_score);
 }
