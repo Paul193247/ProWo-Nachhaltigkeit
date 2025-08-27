@@ -378,6 +378,7 @@ function update_score() {
   let HochhausKa = 0;
   let KohlekraftwerkGuw = 0;
   let SupermarktGuw = 0;
+  let ShoppingcenterGuw = 0;
   let EinkaufsstraßeGuw = 0;
   let KrankenhausGuw = 0;
   let ShoppingceterGuw = 0;
