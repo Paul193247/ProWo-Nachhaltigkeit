@@ -335,13 +335,13 @@ class Kraftwerk extends Cell {
 
 const htmlstuff = new HTMLStuff();
 
-htmlstuff.add("h1", "Name des Spieles");
+htmlstuff.add("h1", "Substanable City", { textAlign: "center" });
 
-htmlstuff.add("h3", "Baue eine nachhaltige Stadt");
+htmlstuff.add("h3", "Baue eine nachhaltige Stadt", { textAlign: "center" });
 
-const score_display = htmlstuff.add("div", "");
+const score_display = htmlstuff.add("div", "", { textAlign: "center" });
 
-const balance_display = htmlstuff.add("div", "");
+const balance_display = htmlstuff.add("div", "", { textAlign: "center" });
 
 const grid = new Grid(
   [
@@ -391,7 +391,7 @@ function update_score() {
   let AtomkraftwerkBus = 0;
   let SupermarktKh = 0;
   let EinkaufsstraßeKh = 0;
-  let ShoppincenterKh = 0;
+  let ShoppingcenterKh = 0;
   let KrankenhausWse = 0;
   let ArbeitsviertelFabrikAuw = 0;
   let KohlekraftwerkAuw = 0;
@@ -443,7 +443,7 @@ function update_score() {
         if (filename == "Atomkraftwerk.png") AtomkraftwerkBus += 10;
         if (filename == "Einkaufsladen.png") SupermarktKh += 8;
         if (filename == "einkaufsstraße.png") EinkaufsstraßeKh += 8;
-        if (filename == "einkaufsstraße upgrade.png") ShoppincenterKh += 10;
+        if (filename == "einkaufsstraße upgrade.png") ShoppingcenterKh += 10;
         if (filename == "Krankenhaus1.png") KrankenhausWse += 10;
         if (filename == "Fabrik.png") ArbeitsviertelFabrikAuw += 1;
         if (filename == "Kohlekraftwerk1.png") KohlekraftwerkAuw += 0.5;
@@ -530,7 +530,6 @@ function update_score() {
       { value: ArbeitsviertelFabrikAuw, weight: 0.7 },
       { value: KohlekraftwerkAuw, weight: 0.7 },
       { value: AtomkraftwerkAuw, weight: 0.7 },
-      { value: WindkraftwerkAuw, weight: 0.7 },
       { value: KrankenhausAuw, weight: 0.7 },
       { value: CasinoAuw, weight: 0.7 },
       { value: KindergartenAuw, weight: 0.7 },
@@ -557,15 +556,15 @@ function update_score() {
   const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui];
   const overallSustainability = weightedGroupSum(groups);
 
-  score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)}`;
-  score_display.innerHTML = `Score:${Kli}`;
-  score_display.innerHTML = `Score:${Ka}`;
-  score_display.innerHTML = `Score:${Guw}`;
-  score_display.innerHTML = `Score:${Hb}`;
-  score_display.innerHTML = `Score:${Bus}`;
-  score_display.innerHTML = `Score:${Kh}`;
-  score_display.innerHTML = `Score:${Auw}`;
-  balance_display.innerHTML = `Balance: ${balance.balance}`;
+  score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)} \n`;
+  score_display.innerHTML += `Score:${Kli} \n`;
+  score_display.innerHTML += `Score:${Ka} \n`;
+  score_display.innerHTML += `Score:${Guw} \n`;
+  score_display.innerHTML += `Score:${Hb} \n`;
+  score_display.innerHTML += `Score:${Bus} \n`;
+  score_display.innerHTML += `Score:${Kh} \n`;
+  score_display.innerHTML += `Score:${Auw}`;
+  balance_display.innerHTML = `Budget: ${balance.balance}`;
   requestAnimationFrame(update_score);
 }
 
