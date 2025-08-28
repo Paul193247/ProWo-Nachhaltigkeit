@@ -404,7 +404,28 @@ function update_score() {
   let KohlekraftwerkAuw = 0;
   let AtomkraftwerkAuw = 0;
   let KrankenhausAuw = 0;
-  let CasinoAuw = 0;
+  let CasinoAuw = 0; 
+  let KohlekraftwerkGdm = 0;
+  let UBahnGdm = 0;
+  let ParkGdm = 0;
+  let SpielplatzGdm = 0;
+  let CasinoGdm = 0;
+  let WohnhäuserGdm = 0;
+  let ReihenhäuserGdm = 0;
+  let PlattenbauGdm = 0;
+  let PlattenbausolarGdm = 0;
+  let WolkenkratzerGdm = 0;
+  let ArbeitsviertelFabrikGdm = 0;
+  let SupermarktGdm = 0;
+  let EinkaufsstraßeGdm = 0;
+  let KrankenhausGdm = 0;
+  let ShoppingcenterGdm = 0;
+  let KindergartenGdm = 0;
+  let SchuleGdm = 0;
+  let UniversitätGdm = 0;
+  let PolizeiFeuerwehrGdm = 0;
+  let WindkraftwerkGdm = 0;
+  let AtomkraftwerkGdm = 0;
 
   let KindergartenAuw = 0;
   let SchuleAuw = 0;
@@ -468,6 +489,20 @@ function update_score() {
         if (filename == "Kohlekraftwerk1.png") KohlekraftwerkIiui += 6.5;
         if (filename == "Windkraftwerk1.png") WindkraftwerkIiui += 7;
         if (filename == "Atomkraftwerk.png") AtomkraftwerkIiui += 8.5;
+        if (filename == "Kohlekraftwerk1.png") KohlekraftwerkGdm -= 7;
+        if (filename == "U Bahn.png") UBahnGdm += 5;
+        if (filename == "park.png") ParkGdm += 7;
+        if (filename == "Spielplatz.png") SpielplatzGdm += 3;
+        if (filename == "Casino.png") CasinoGdm += 10;
+        if (filename == "Einkaufsladen.png") SupermarktGdm += 7;
+        if (filename == "einkaufsstraße.png") EinkaufsstraßeGdm += 9;
+        if (filename == "einkaufsstraße upgrade.png") ShoppingcenterGdm += 10;
+        if (filename == "Krankenhaus.png") KrankenhausGdm += 3;
+        if (filename == "Kindergarten1.png") KindergartenGdm += 6;
+        if (filename == "Schule1.png") SchuleGdm +=8;
+        if (filename == "Uni1.png") UniversitätGdm += 9;
+        if (filename == "Polizei.png") PolizeiFeuerwehrGdm += 7;
+        if (filename == "Atomkraftwerk.png") AtomkraftwerkGdm -= 5;
       }
     }
   }
@@ -560,6 +595,26 @@ function update_score() {
     weight: 11,
   };
 
+  const Happy = {
+    values: [
+      { value: KohlekraftwerkGdm, weight: 0.7 },
+      { value: UBahnGdm, weight: 0.7 }
+      { value: ParkGdm, weight: 0.7 }
+      { value: SpielplatzGdm, weight: 0.7 }
+      { value: CasinoGdm, weight: 0.7 }
+      { value: EinkaufsladenGdm, weight: 0.7 }
+      { value: EinkaufsstraßeGdm, weight: 0.7 }
+      { value: ShoppingcenterGdm, weight: 0.7 }
+      { value: KrankenhausGdm, weight: 0.7 }
+      { value: KindergartenGdm, weight: 0.7 }
+      { value: SchuleGdm, weight: 0.7 }
+      { value: UniversitätGdm, weight: 0.7 }
+      { value: FeuerwehrPolizeiGdm, weight: 0.7 }
+      { value: AtomkraftwerkGdm, weight: 0.7 }
+    ],
+    weight: 11,
+  };
+
   const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui];
   const overallSustainability = weightedGroupSum(groups);
 
@@ -591,6 +646,7 @@ function update_score() {
   score_display.innerHTML += `Hunger:${overallKh.toFixed(2)} \n`;
   score_display.innerHTML += `Arbeit:${overallAuw.toFixed(2)} \n`;
   score_display.innerHTML += `Industrie:${overallIiui.toFixed(2)}\n`;
+
   };
   balance_display.innerHTML = `Budget: ${balance.balance}`;
   requestAnimationFrame(update_score);
