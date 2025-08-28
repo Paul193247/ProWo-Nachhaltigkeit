@@ -191,12 +191,17 @@ class Kindergarten extends Cell {
     });
     this.sidebar.add("button", {
       content: "Upgraden zu Schule für 7 Mio",
-      callback: () => {
+      
+    callback: () => {
         console.log("dfgsdfd");
         if (!balance.buy(7000000)) return;
         this.cost += 7000000;
         this.image.src = "img/Schule1.png";
         this.sidebar = new Sidebar();
+        this.sidebar.add("h1", { content: "Schule" });
+        this.sidebar.add("div", {
+      content: "Erhöht die Bildung und zufriedenheit der Bürger",
+    });
         this.sidebar.add("button", {
           content: "Upgraden zu Uni für 60 Mio",
           callback: () => {
@@ -204,6 +209,10 @@ class Kindergarten extends Cell {
             if (!balance.buy(60000000)) return;
             this.image.src = "img/Uni1.png";
             this.sidebar = new Sidebar();
+           this.sidebar.add("h1", { content: "Universität" });
+            this.sidebar.add("div", {
+      content: "Erhöht die Bildung und zufriedenheit der Bürger",
+    });
             this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
             this.sidebar.open();
           },
