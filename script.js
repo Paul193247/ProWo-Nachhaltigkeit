@@ -554,8 +554,11 @@ function update_score() {
   const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui];
   const overallSustainability = weightedGroupSum(groups);
 
+  const groupKli = [Kli];
+  const overallKli = weightedGroupSum(groupKli);
+
   score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)} \n`;
-  score_display.innerHTML += `Score:${Kli} \n`;
+  score_display.innerHTML += `Score:${overallKli.toFixed(2)} \n`;
   score_display.innerHTML += `Score:${Ka} \n`;
   score_display.innerHTML += `Score:${Guw} \n`;
   score_display.innerHTML += `Score:${Hb} \n`;
