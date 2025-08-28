@@ -677,7 +677,7 @@ function update_score() {
   const groupIiui = [Iiui];
   let overallIiui = weightedGroupSum(groupIiui);
   const groupGdm = [Gdm];
-  const overallGdm = weightedGroupSum(groupGdm);  
+  let overallGdm = weightedGroupSum(groupGdm);  
   overallSustainability = Math.min(overallSustainability, 100);
   overallKli = Math.min(overallKli, 100);
   overallKa = Math.min(overallKa, 100);
