@@ -335,13 +335,13 @@ class Kraftwerk extends Cell {
 
 const htmlstuff = new HTMLStuff();
 
-htmlstuff.add("h1", "Name des Spieles");
+htmlstuff.add("h1", "Sustainable City", { textAlign: "center" });
 
-htmlstuff.add("h3", "Baue eine nachhaltige Stadt");
+htmlstuff.add("h3", "Baue eine nachhaltige Stadt", { textAlign: "center" });
 
-const score_display = htmlstuff.add("div", "");
+const score_display = htmlstuff.add("div", "", { textAlign: "center" });
 
-const balance_display = htmlstuff.add("div", "");
+const balance_display = htmlstuff.add("div", "", { textAlign: "center" });
 
 const grid = new Grid(
   [
@@ -554,15 +554,15 @@ function update_score() {
   const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui];
   const overallSustainability = weightedGroupSum(groups);
 
-  score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)}`;
-  score_display.innerHTML = `Score:${Kli}`;
-  score_display.innerHTML = `Score:${Ka}`;
-  score_display.innerHTML = `Score:${Guw}`;
-  score_display.innerHTML = `Score:${Hb}`;
-  score_display.innerHTML = `Score:${Bus}`;
-  score_display.innerHTML = `Score:${Kh}`;
-  score_display.innerHTML = `Score:${Auw}`;
-  balance_display.innerHTML = `Balance: ${balance.balance}`;
+  score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)} \n`;
+  score_display.innerHTML += `Score:${Kli} \n`;
+  score_display.innerHTML += `Score:${Ka} \n`;
+  score_display.innerHTML += `Score:${Guw} \n`;
+  score_display.innerHTML += `Score:${Hb} \n`;
+  score_display.innerHTML += `Score:${Bus} \n`;
+  score_display.innerHTML += `Score:${Kh} \n`;
+  score_display.innerHTML += `Score:${Auw}`;
+  balance_display.innerHTML = `Budget: ${balance.balance}`;
   requestAnimationFrame(update_score);
 }
 
