@@ -335,7 +335,7 @@ class Kraftwerk extends Cell {
 
 const htmlstuff = new HTMLStuff();
 
-htmlstuff.add("h1", "Substanable City", { textAlign: "center" });
+htmlstuff.add("h1", "Sustainable City", { textAlign: "center" });
 
 htmlstuff.add("h3", "Baue eine nachhaltige Stadt", { textAlign: "center" });
 
