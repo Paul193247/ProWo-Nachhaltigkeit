@@ -38,7 +38,7 @@ class Krankenhaus extends Cell {
     super("img/Krankenhaus1.png", "Notfall Einrichtungen", 30000000);
     this.color = "yellow";
     this.sidebar = new Sidebar();
-   this.sidebar.add("h1", { content: "Krankenhaus" });
+    this.sidebar.add("h1", { content: "Krankenhaus" });
     this.sidebar.add("div", {
       content: "Hat hohe positive Auswirkung auf Sanitär Einrichtungen",
     });
@@ -199,8 +199,8 @@ class Kindergarten extends Cell {
     });
     this.sidebar.add("button", {
       content: "Upgraden zu Schule für 7 Mio",
-      
-    callback: () => {
+
+      callback: () => {
         console.log("dfgsdfd");
         if (!balance.buy(7000000)) return;
         this.cost += 7000000;
@@ -208,8 +208,8 @@ class Kindergarten extends Cell {
         this.sidebar = new Sidebar();
         this.sidebar.add("h1", { content: "Schule" });
         this.sidebar.add("div", {
-      content: "Erhöht die Bildung und zufriedenheit der Bürger",
-    });
+          content: "Erhöht die Bildung und zufriedenheit der Bürger",
+        });
         this.sidebar.add("button", {
           content: "Upgraden zu Uni für 60 Mio",
           callback: () => {
@@ -217,10 +217,10 @@ class Kindergarten extends Cell {
             if (!balance.buy(60000000)) return;
             this.image.src = "img/Uni1.png";
             this.sidebar = new Sidebar();
-           this.sidebar.add("h1", { content: "Universität" });
+            this.sidebar.add("h1", { content: "Universität" });
             this.sidebar.add("div", {
-      content: "Erhöht die Bildung und zufriedenheit der Bürger",
-    });
+              content: "Erhöht die Bildung und zufriedenheit der Bürger",
+            });
             this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
             this.sidebar.open();
           },
@@ -251,7 +251,7 @@ class Häuser extends Cell {
             console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
             if (!balance.buy(1000000)) return;
             this.image.src = "img/Plattenbau1.png";
-           this.cost += 1000000;
+            this.cost += 1000000;
             this.sidebar = new Sidebar();
             this.sidebar.add("button", {
               content: "Upgraden zu Plattenbau mit Solarplatten für 500 000",
@@ -259,7 +259,7 @@ class Häuser extends Cell {
                 console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
                 if (!balance.buy(500000)) return;
                 this.image.src = "img/Plattenbau2.png";
-                 this.cost += 500000;
+                this.cost += 500000;
                 this.sidebar = new Sidebar();
                 this.sidebar.add("button", {
                   content: "Upgraden zu Wolkenkratzer für 20 Mio",
@@ -319,12 +319,13 @@ class Einkaufsstraße extends Cell {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
         if (!balance.buy(20000000)) return;
         this.image.src = "img/einkaufsstraße upgrade.png";
-         this.cost += 20000000;
+        this.cost += 20000000;
         this.sidebar = new Sidebar();
         this.sidebar.add("h1", { content: "Shopping Mall" });
-    this.sidebar.add("div", {
-      content: "Hat maximal positive Auswirkung auf den Hunger der Menschen",
-    });
+        this.sidebar.add("div", {
+          content:
+            "Hat maximal positive Auswirkung auf den Hunger der Menschen",
+        });
         this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
         this.sidebar.open();
       },
@@ -338,7 +339,7 @@ class Kraftwerk extends Cell {
   constructor() {
     super("img/Kohlekraftwerk1.png", "Kraftwerk", 17000000);
     this.sidebar = new Sidebar();
-  this.sidebar.add("h1", { content: "Kohlekraftwerk" });
+    this.sidebar.add("h1", { content: "Kohlekraftwerk" });
     this.sidebar.add("div", {
       content: "Schlechte Auswirkung auf bezahlbare und Saubere Energie",
     });
@@ -348,12 +349,12 @@ class Kraftwerk extends Cell {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
         if (!balance.buy(15000000)) return;
         this.image.src = "img/Windkraftwerk1.png";
-       this.cost += 15000000;
+        this.cost += 15000000;
         this.sidebar = new Sidebar();
         this.sidebar.add("h1", { content: "Windkraftwerk" });
-    this.sidebar.add("div", {
-      content: "Bessere Auswirkung auf bezahlbare und Saubere Energie",
-    });
+        this.sidebar.add("div", {
+          content: "Bessere Auswirkung auf bezahlbare und Saubere Energie",
+        });
         this.sidebar.add("button", {
           content: "Upgraden zu Atomkraftwerk für 100 Mio",
           callback: () => {
@@ -363,9 +364,10 @@ class Kraftwerk extends Cell {
             this.cost += 100000000;
             this.sidebar = new Sidebar();
             this.sidebar.add("h1", { content: "Atomekraftwerk" });
-    this.sidebar.add("div", {
-      content: "Die beste Auswirkung auf bezahlbare und Saubere Energie",
-    });
+            this.sidebar.add("div", {
+              content:
+                "Die beste Auswirkung auf bezahlbare und Saubere Energie",
+            });
             this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
             this.sidebar.open();
           },
@@ -411,7 +413,6 @@ const grid = new Grid(
   600
 );
 
-
 function update_score() {
   let ParkKli = 0;
   let KohlekraftwerkKli = 0;
@@ -443,7 +444,7 @@ function update_score() {
   let KohlekraftwerkAuw = 0;
   let AtomkraftwerkAuw = 0;
   let KrankenhausAuw = 0;
-  let CasinoAuw = 0; 
+  let CasinoAuw = 0;
   let KohlekraftwerkGdm = 0;
   let UBahnGdm = 0;
   let ParkGdm = 0;
@@ -538,7 +539,7 @@ function update_score() {
         if (filename == "einkaufsstraße upgrade.png") ShoppingcenterGdm += 10;
         if (filename == "Krankenhaus.png") KrankenhausGdm += 3;
         if (filename == "Kindergarten1.png") KindergartenGdm += 6;
-        if (filename == "Schule1.png") SchuleGdm +=8;
+        if (filename == "Schule1.png") SchuleGdm += 8;
         if (filename == "Uni1.png") UniversitätGdm += 9;
         if (filename == "Polizei.png") PolizeiFeuerwehrGdm += 7;
         if (filename == "Atomkraftwerk.png") AtomkraftwerkGdm -= 5;
@@ -601,9 +602,7 @@ function update_score() {
     weight: 11,
   };
   const Wse = {
-    values: [
-      { value: KrankenhausWse, weight: 10 }
-    ],
+    values: [{ value: KrankenhausWse, weight: 10 }],
     weight: 11,
   };
   const Auw = {
@@ -676,8 +675,7 @@ function update_score() {
   const groupIiui = [Iiui];
   const overallIiui = weightedGroupSum(groupIiui);
   const groupGdm = [Gdm];
-  const overallGdm = weightedGroupSum(groupGdm);  
-
+  const overallGdm = weightedGroupSum(groupGdm);
 
   overallSustainability = Math.min(overallSustainability, 100);
   overallKli = Math.min(overallKli, 100);
@@ -702,7 +700,6 @@ function update_score() {
   score_display.innerHTML += `Industrie:${overallIiui.toFixed(2)}\n`;
   score_display.innerHTML += `Glücklichkeit:${overallGdm.toFixed(2)}\n`;
 
-  };
   balance_display.innerHTML = `Budget: ${balance.balance}`;
   requestAnimationFrame(update_score);
 }
