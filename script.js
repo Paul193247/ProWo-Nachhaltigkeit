@@ -143,7 +143,7 @@ class Kreuzung extends Cell {
       },
     });
     this.sidebar.add("button", {
-      content: "T-Kreuzung Rchts",
+      content: "T-Kreuzung Rechts",
       callback: () => {
         this.image.src = "img/TKreuzungR.png";
         this.sidebar.open();
