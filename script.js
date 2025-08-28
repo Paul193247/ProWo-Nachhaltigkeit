@@ -9,7 +9,7 @@ import {
   Balance,
 } from "./library.js";
 
-const balance = new Balance(10000000000000000);
+const balance = new Balance(1500000000);
 
 class Park extends Cell {
   constructor() {
