@@ -556,15 +556,33 @@ function update_score() {
 
   const groupKli = [Kli];
   const overallKli = weightedGroupSum(groupKli);
+  const groupKa = [Ka];
+  const overallKa = weightedGroupSum(groupKa);
+  const groupGuw = [Guw];
+  const overallGuw = weightedGroupSum(groupGuw);
+  const groupHb = [Hb];
+  const overallHb = weightedGroupSum(groupHb);
+  const groupBus = [Bus];
+  const overallBus = weightedGroupSum(groupBus);
+  const groupKh = [Kh];
+  const overallKh = weightedGroupSum(groupKh);
+  const groupWse = [Wse];
+  const overallWse = weightedGroupSum(groupWse);
+  const groupAuw = [Auw];
+  const overallAuw = weightedGroupSum(groupAuw);
+  const groupIiui = [Iiui];
+  const overallIiui = weightedGroupSum(groupIiui);
 
   score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)} \n`;
-  score_display.innerHTML += `Score:${overallKli.toFixed(2)} \n`;
-  score_display.innerHTML += `Score:${Ka} \n`;
-  score_display.innerHTML += `Score:${Guw} \n`;
-  score_display.innerHTML += `Score:${Hb} \n`;
-  score_display.innerHTML += `Score:${Bus} \n`;
-  score_display.innerHTML += `Score:${Kh} \n`;
-  score_display.innerHTML += `Score:${Auw}`;
+  score_display.innerHTML += `Klima:${overallKli.toFixed(2)} \n`;
+  score_display.innerHTML += `Armut:${overallKa.toFixed(2)} \n`;
+  score_display.innerHTML += `Gesuntheit:${overallGuw.toFixed(2)} \n`;
+  score_display.innerHTML += `Bildung:${overallHb.toFixed(2)} \n`;
+  score_display.innerHTML += `Energie:${overallBus.toFixed(2)} \n`;
+  score_display.innerHTML += `Hunger:${overallKh.toFixed(2)} \n`;
+  score_display.innerHTML += `Arbeit:${overallAuw.toFixed(2)} \n`;
+  score_display.innerHTML += `Industrie:${overallIiui.toFixed(2)}\n`;
+  };
   balance_display.innerHTML = `Budget: ${balance.balance}`;
   requestAnimationFrame(update_score);
 }
