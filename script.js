@@ -449,7 +449,7 @@ function update_score() {
   let WolkenkratzerGdm = 0;
   let ArbeitsviertelFabrikGdm = 0;
   let SupermarktGdm = 0;
-  let EinkaufsstraßeGdm = 0;
+  let EinkaufsladenGdm = 0;
   let KrankenhausGdm = 0;
   let ShoppingcenterGdm = 0;
   let KindergartenGdm = 0;
