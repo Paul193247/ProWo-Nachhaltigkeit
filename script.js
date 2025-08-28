@@ -655,7 +655,18 @@ function update_score() {
     weight: 11,
   };
 
-  const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui, Gdm];
+const groups = [
+  { ...Kli, values: Kli.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Ka, values: Ka.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Guw, values: Guw.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Hb, values: Hb.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Bus, values: Bus.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Kh, values: Kh.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Wse, values: Wse.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Auw, values: Auw.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Iiui, values: Iiui.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+  { ...Gdm, values: Gdm.values.map(v => ({ ...v, value: Math.min(v.value, 99.99) })) },
+];
   let overallSustainability = weightedGroupSum(groups);
 
   const groupKli = [Kli];
