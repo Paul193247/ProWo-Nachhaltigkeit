@@ -38,6 +38,10 @@ class Krankenhaus extends Cell {
     super("img/Krankenhaus1.png", "Notfall Einrichtungen", 30000000);
     this.color = "yellow";
     this.sidebar = new Sidebar();
+   this.sidebar.add("h1", { content: "Krankenhaus" });
+    this.sidebar.add("div", {
+      content: "Hat hohe positive Auswirkung auf Sanitär Einrichtungen",
+    });
     this.sidebar.add("button", {
       content: "Polizei Station",
       callback: () => {
@@ -62,6 +66,10 @@ class Einkaufsladen extends Cell {
     super("img/Einkaufsladen.png", "Einkaufsladen", 3000000);
     this.color = "yellow";
     this.sidebar = new Sidebar();
+    this.sidebar.add("h1", { content: "Supermarkt" });
+    this.sidebar.add("div", {
+      content: "Hat positive Auswirkung auf den Hunger der Menschen",
+    });
     this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
   }
   onclick() {
@@ -284,6 +292,10 @@ class UBahn extends Cell {
     super("img/U Bahn.png", "U-Bahn", 2000000);
     this.color = "yellow";
     this.sidebar = new Sidebar();
+    this.sidebar.add("h1", { content: "U-Bahn" });
+    this.sidebar.add("div", {
+      content: "Hat positive Auswirkung auf den Klimaschutz",
+    });
     this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
   }
   onclick() {
@@ -294,6 +306,10 @@ class Einkaufsstraße extends Cell {
   constructor() {
     super("img/einkaufsstraße.png", "Einkaufsstraße", 15000000);
     this.sidebar = new Sidebar();
+    this.sidebar.add("h1", { content: "Einkaufsstraße" });
+    this.sidebar.add("div", {
+      content: "Hat positive Auswirkung auf den Hunger der Menschen",
+    });
     this.sidebar.add("button", {
       content: "Upgraden zu Shopping Mall für 20 Mio.",
       callback: () => {
@@ -301,6 +317,10 @@ class Einkaufsstraße extends Cell {
         if (!balance.buy(20000000)) return;
         this.image.src = "img/einkaufsstraße upgrade.png";
         this.sidebar = new Sidebar();
+        this.sidebar.add("h1", { content: "Shopping Mall" });
+    this.sidebar.add("div", {
+      content: "Hat maximal positive Auswirkung auf den Hunger der Menschen",
+    });
         this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
         this.sidebar.open();
       },
@@ -314,6 +334,10 @@ class Kraftwerk extends Cell {
   constructor() {
     super("img/Kohlekraftwerk1.png", "Kraftwerk", 17000000);
     this.sidebar = new Sidebar();
+  this.sidebar.add("h1", { content: "Kohlekraftwerk" });
+    this.sidebar.add("div", {
+      content: "Schlechte Auswirkung auf bezahlbare und Saubere Energie",
+    });
     this.sidebar.add("button", {
       content: "Upgraden zu Windkraftwerk für 15 Mio",
       callback: () => {
@@ -321,6 +345,10 @@ class Kraftwerk extends Cell {
         if (!balance.buy(15000000)) return;
         this.image.src = "img/Windkraftwerk1.png";
         this.sidebar = new Sidebar();
+        this.sidebar.add("h1", { content: "Windkraftwerk" });
+    this.sidebar.add("div", {
+      content: "Bessere Auswirkung auf bezahlbare und Saubere Energie",
+    });
         this.sidebar.add("button", {
           content: "Upgraden zu Atomkraftwerk für 100 Mio",
           callback: () => {
@@ -328,6 +356,10 @@ class Kraftwerk extends Cell {
             if (!balance.buy(100000000)) return;
             this.image.src = "img/Atomkraftwerk.png";
             this.sidebar = new Sidebar();
+            this.sidebar.add("h1", { content: "Kohlekraftwerk" });
+    this.sidebar.add("div", {
+      content: "Die beste Auswirkung auf bezahlbare und Saubere Energie",
+    });
             this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
             this.sidebar.open();
           },
