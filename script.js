@@ -671,6 +671,19 @@ function update_score() {
   const groupGdm = [Gdm];
   const overallGdm = weightedGroupSum(groupGdm);  
 
+
+  overallSustainability = Math.min(overallSustainability, 100);
+  overallKli = Math.min(overallKli, 100);
+  overallKa = Math.min(overallKa, 100);
+  overallGuw = Math.min(overallGuw, 100);
+  overallHb = Math.min(overallHb, 100);
+  overallBus = Math.min(overallBus, 100);
+  overallKh = Math.min(overallKh, 100);
+  overallWse = Math.min(overallWse, 100);
+  overallAuw = Math.min(overallAuw, 100);
+  overallIiui = Math.min(overallIiui, 100);
+  overallGdm = Math.min(overallGdm, 100);
+
   score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)} \n`;
   score_display.innerHTML += `Klima:${overallKli.toFixed(2)} \n`;
   score_display.innerHTML += `Armut:${overallKa.toFixed(2)} \n`;
