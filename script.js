@@ -20,7 +20,7 @@ class Park extends Cell {
       callback: () => {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
         if (!balance.buy(500000)) return;
-        this.cost += 500000 ;
+        this.cost += 500000;
         this.image.src = "img/park upgrade.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("h3", { content: "Maximale Stufe erreicht" });
@@ -186,13 +186,15 @@ class Kindergarten extends Cell {
     this.color = "yellow";
     this.sidebar = new Sidebar();
     this.sidebar.add("h1", { content: "Kindergarten" });
-    this.sidebar.add("div", { content: "Erhöht die Bildung und zufriedenheit der Bürger" });
+    this.sidebar.add("div", {
+      content: "Erhöht die Bildung und zufriedenheit der Bürger",
+    });
     this.sidebar.add("button", {
       content: "Upgraden zu Schule für 7 Mio",
       callback: () => {
         console.log("dfgsdfd");
         if (!balance.buy(7000000)) return;
-        this.cost += 7000000 ;
+        this.cost += 7000000;
         this.image.src = "img/Schule1.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("button", {
@@ -384,7 +386,7 @@ function update_score() {
   let KindergartenHb = 0;
   let SchuleHb = 0;
   let UniversitätHb = 0;
-  let kohlekraftwerkBus = 0;
+  let KohlekraftwerkBus = 0;
   let WindkraftwerkBus = 0;
   let AtomkraftwerkBus = 0;
   let SupermarktKh = 0;
@@ -396,7 +398,7 @@ function update_score() {
   let AtomkraftwerkAuw = 0;
   let KrankenhausAuw = 0;
   let CasinoAuw = 0;
-  
+
   let KindergartenAuw = 0;
   let SchuleAuw = 0;
   let UniversitätAuw = 0;
@@ -423,11 +425,11 @@ function update_score() {
         if (filename == "Reihenhäuser.png") ReihenhäuserKa += 8;
         if (filename == "Wolkenkratzer.png") WolkenkratzerKa += 9;
         if (filename == "Kohlekraftwerk1.png") KohlekraftwerkKli -= 3;
-        if (filename == "U Bahn.png")   UBahnkli += 5;
+        if (filename == "U Bahn.png") UBahnkli += 5;
         if (filename == "park.png") ParkKli += 7;
         if (filename == "Spielplatz.png") SpielplatzKli += 9;
         if (filename == "Casino.png") CasinoKa -= 2;
-        if (filename == "Fabrik.png")  ArbeitsviertelFabrikKa += 10;
+        if (filename == "Fabrik.png") ArbeitsviertelFabrikKa += 10;
         if (filename == "Kohlekraftwerk1.png") KohlekraftwerkGuw -= 3;
         if (filename == "Einkaufsladen.png") SupermarktGuw += 5;
         if (filename == "einkaufsstraße.png") EinkaufsstraßeGuw += 7;
@@ -468,7 +470,7 @@ function update_score() {
       { value: KohlekraftwerkKli, weight: 2.5 },
       { value: UBahnkli, weight: 2.5 },
       { value: ParkKli, weight: 2.5 },
-      { value: SpielplatzKli, weight: 2.5 }
+      { value: SpielplatzKli, weight: 2.5 },
     ],
     weight: 12,
   };
@@ -520,9 +522,7 @@ function update_score() {
     weight: 11,
   };
   const Wse = {
-    values: [
-      { value: KrankenhausWse, weight: 10 }
-    ],
+    values: [{ value: KrankenhausWse, weight: 10 }],
     weight: 11,
   };
   const Auw = {
