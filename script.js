@@ -457,12 +457,14 @@ function update_score() {
   let ArbeitsviertelFabrikGdm = 0;
   let SupermarktGdm = 0;
   let EinkaufsladenGdm = 0;
+  let EinkaufsstraßeGdm = 0;
   let KrankenhausGdm = 0;
   let ShoppingcenterGdm = 0;
   let KindergartenGdm = 0;
   let SchuleGdm = 0;
   let UniversitätGdm = 0;
   let PolizeiFeuerwehrGdm = 0;
+  let FeuerwehrPolizeiGdm = 0;
   let WindkraftwerkGdm = 0;
   let AtomkraftwerkGdm = 0;
 
@@ -655,30 +657,30 @@ function update_score() {
   };
 
   const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui, Gdm];
-  const overallSustainability = weightedGroupSum(groups);
+  let overallSustainability = weightedGroupSum(groups);
 
   const groupKli = [Kli];
-  const overallKli = weightedGroupSum(groupKli);
+  let overallKli = weightedGroupSum(groupKli);
   const groupKa = [Ka];
-  const overallKa = weightedGroupSum(groupKa);
+  let overallKa = weightedGroupSum(groupKa);
   const groupGuw = [Guw];
-  const overallGuw = weightedGroupSum(groupGuw);
+  let overallGuw = weightedGroupSum(groupGuw);
   const groupHb = [Hb];
-  const overallHb = weightedGroupSum(groupHb);
+  let overallHb = weightedGroupSum(groupHb);
   const groupBus = [Bus];
-  const overallBus = weightedGroupSum(groupBus);
+  let overallBus = weightedGroupSum(groupBus);
   const groupKh = [Kh];
-  const overallKh = weightedGroupSum(groupKh);
+  let overallKh = weightedGroupSum(groupKh);
   const groupWse = [Wse];
-  const overallWse = weightedGroupSum(groupWse);
+  let overallWse = weightedGroupSum(groupWse);
   const groupAuw = [Auw];
-  const overallAuw = weightedGroupSum(groupAuw);
+  let overallAuw = weightedGroupSum(groupAuw);
   const groupIiui = [Iiui];
-  const overallIiui = weightedGroupSum(groupIiui);
+  let overallIiui = weightedGroupSum(groupIiui);
   const groupGdm = [Gdm];
-  const overallGdm = weightedGroupSum(groupGdm);  
+  let overallGdm = weightedGroupSum(groupGdm);  
 
-
+  // Begrenze alle Scores auf maximal 100
   overallSustainability = Math.min(overallSustainability, 100);
   overallKli = Math.min(overallKli, 100);
   overallKa = Math.min(overallKa, 100);
@@ -691,6 +693,8 @@ function update_score() {
   overallIiui = Math.min(overallIiui, 100);
   overallGdm = Math.min(overallGdm, 100);
 
+
+
   score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)} \n`;
   score_display.innerHTML += `Klima:${overallKli.toFixed(2)} \n`;
   score_display.innerHTML += `Armut:${overallKa.toFixed(2)} \n`;
@@ -702,7 +706,6 @@ function update_score() {
   score_display.innerHTML += `Industrie:${overallIiui.toFixed(2)}\n`;
   score_display.innerHTML += `Glücklichkeit:${overallGdm.toFixed(2)}\n`;
 
-  };
   balance_display.innerHTML = `Budget: ${balance.balance}`;
   requestAnimationFrame(update_score);
 }
