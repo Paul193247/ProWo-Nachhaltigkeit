@@ -242,6 +242,7 @@ class Häuser extends Cell {
       content: "Upgraden zu Reihenhäuser für 10 Mio",
       callback: () => {
         if (!balance.buy(10000000)) return;
+        this.cost += 10000000;
         this.image.src = "img/Reihenhäuser.png";
         this.sidebar = new Sidebar();
         this.sidebar.add("button", {
@@ -250,7 +251,7 @@ class Häuser extends Cell {
             console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
             if (!balance.buy(1000000)) return;
             this.image.src = "img/Plattenbau1.png";
-
+           this.cost += 1000000;
             this.sidebar = new Sidebar();
             this.sidebar.add("button", {
               content: "Upgraden zu Plattenbau mit Solarplatten für 500 000",
@@ -258,12 +259,14 @@ class Häuser extends Cell {
                 console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
                 if (!balance.buy(500000)) return;
                 this.image.src = "img/Plattenbau2.png";
+                 this.cost += 500000;
                 this.sidebar = new Sidebar();
                 this.sidebar.add("button", {
                   content: "Upgraden zu Wolkenkratzer für 20 Mio",
                   callback: () => {
                     console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
                     if (!balance.buy(20000000)) return;
+                    this.cost += 20000000;
                     this.image.src = "img/Wolkenkratzer.png";
                     this.sidebar = new Sidebar();
                     this.sidebar.add("h3", {
@@ -316,6 +319,7 @@ class Einkaufsstraße extends Cell {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
         if (!balance.buy(20000000)) return;
         this.image.src = "img/einkaufsstraße upgrade.png";
+         this.cost += 20000000;
         this.sidebar = new Sidebar();
         this.sidebar.add("h1", { content: "Shopping Mall" });
     this.sidebar.add("div", {
@@ -344,6 +348,7 @@ class Kraftwerk extends Cell {
         console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
         if (!balance.buy(15000000)) return;
         this.image.src = "img/Windkraftwerk1.png";
+       this.cost += 15000000;
         this.sidebar = new Sidebar();
         this.sidebar.add("h1", { content: "Windkraftwerk" });
     this.sidebar.add("div", {
@@ -355,8 +360,9 @@ class Kraftwerk extends Cell {
             console.log("sdfbdsfbsdfbsdfbsdfbsdfbsdfbdsfbsdfb");
             if (!balance.buy(100000000)) return;
             this.image.src = "img/Atomkraftwerk.png";
+            this.cost += 100000000;
             this.sidebar = new Sidebar();
-            this.sidebar.add("h1", { content: "Kohlekraftwerk" });
+            this.sidebar.add("h1", { content: "Atomekraftwerk" });
     this.sidebar.add("div", {
       content: "Die beste Auswirkung auf bezahlbare und Saubere Energie",
     });
@@ -404,6 +410,7 @@ const grid = new Grid(
   600,
   600
 );
+
 
 function update_score() {
   let ParkKli = 0;
@@ -630,19 +637,19 @@ function update_score() {
   const Gdm = {
     values: [
       { value: KohlekraftwerkGdm, weight: 0.7 },
-      { value: UBahnGdm, weight: 0.7 }
-      { value: ParkGdm, weight: 0.7 }
-      { value: SpielplatzGdm, weight: 0.7 }
-      { value: CasinoGdm, weight: 0.7 }
-      { value: EinkaufsladenGdm, weight: 0.7 }
-      { value: EinkaufsstraßeGdm, weight: 0.7 }
-      { value: ShoppingcenterGdm, weight: 0.7 }
-      { value: KrankenhausGdm, weight: 0.7 }
-      { value: KindergartenGdm, weight: 0.7 }
-      { value: SchuleGdm, weight: 0.7 }
-      { value: UniversitätGdm, weight: 0.7 }
-      { value: FeuerwehrPolizeiGdm, weight: 0.7 }
-      { value: AtomkraftwerkGdm, weight: 0.7 }
+      { value: UBahnGdm, weight: 0.7 },
+      { value: ParkGdm, weight: 0.7 },
+      { value: SpielplatzGdm, weight: 0.7 },
+      { value: CasinoGdm, weight: 0.7 },
+      { value: EinkaufsladenGdm, weight: 0.7 },
+      { value: EinkaufsstraßeGdm, weight: 0.7 },
+      { value: ShoppingcenterGdm, weight: 0.7 },
+      { value: KrankenhausGdm, weight: 0.7 },
+      { value: KindergartenGdm, weight: 0.7 },
+      { value: SchuleGdm, weight: 0.7 },
+      { value: UniversitätGdm, weight: 0.7 },
+      { value: FeuerwehrPolizeiGdm, weight: 0.7 },
+      { value: AtomkraftwerkGdm, weight: 0.7 },
     ],
     weight: 11,
   };
