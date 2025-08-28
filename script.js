@@ -367,7 +367,7 @@ const grid = new Grid(
 function update_score() {
   let ParkKli = 0;
   let KohlekraftwerkKli = 0;
-  let UBahnkli = 0;
+  let UBahnKli = 0;
   let SpielplatzKli = 0;
   let CasinoKa = 0;
   let WohnhäuserKa = 0;
@@ -376,13 +376,11 @@ function update_score() {
   let PlattenbausolarKa = 0;
   let ReihenhäuserKa = 0;
   let WolkenkratzerKa = 0;
-  let HochhausKa = 0;
   let KohlekraftwerkGuw = 0;
   let SupermarktGuw = 0;
   let ShoppingcenterGuw = 0;
   let EinkaufsstraßeGuw = 0;
   let KrankenhausGuw = 0;
-  let ShoppingceterGuw = 0;
   let KindergartenHb = 0;
   let SchuleHb = 0;
   let UniversitätHb = 0;
@@ -391,7 +389,7 @@ function update_score() {
   let AtomkraftwerkBus = 0;
   let SupermarktKh = 0;
   let EinkaufsstraßeKh = 0;
-  let ShoppincenterKh = 0;
+  let ShoppingcenterKh = 0;
   let KrankenhausWse = 0;
   let ArbeitsviertelFabrikAuw = 0;
   let KohlekraftwerkAuw = 0;
@@ -421,11 +419,10 @@ function update_score() {
         if (filename == "Haueser1.png") WohnhäuserKa += 7;
         if (filename == "Plattenbau1.png") PlattenbauKa += 8;
         if (filename == "Plattenbau2.png") PlattenbausolarKa += 9;
-        if (filename == "Hochhaus.png") HochhausKa += 8;
         if (filename == "Reihenhäuser.png") ReihenhäuserKa += 8;
         if (filename == "Wolkenkratzer.png") WolkenkratzerKa += 9;
         if (filename == "Kohlekraftwerk1.png") KohlekraftwerkKli -= 3;
-        if (filename == "U Bahn.png") UBahnkli += 5;
+        if (filename == "U Bahn.png") UBahnKli += 5;
         if (filename == "park.png") ParkKli += 7;
         if (filename == "Spielplatz.png") SpielplatzKli += 9;
         if (filename == "Casino.png") CasinoKa -= 2;
@@ -434,16 +431,16 @@ function update_score() {
         if (filename == "Einkaufsladen.png") SupermarktGuw += 5;
         if (filename == "einkaufsstraße.png") EinkaufsstraßeGuw += 7;
         if (filename == "Krankenhaus1.png") KrankenhausGuw += 10;
-        if (filename == "einkaufsstraße upgrade.png") ShoppingceterGuw += 9;
+        if (filename == "einkaufsstraße upgrade.png") ShoppingcenterGuw += 9;
         if (filename == "Kindergarten1.png") KindergartenHb += 1;
         if (filename == "Schule1.png") SchuleHb += 3;
         if (filename == "Uni1.png") UniversitätHb += 10;
-        if (filename == "Kohlekraftwerk1.png") kohlekraftwerkBus += 1;
+        if (filename == "Kohlekraftwerk1.png") KohlekraftwerkBus += 1;
         if (filename == "Windkraftwerk1.png") WindkraftwerkBus += 5;
         if (filename == "Atomkraftwerk.png") AtomkraftwerkBus += 10;
         if (filename == "Einkaufsladen.png") SupermarktKh += 8;
         if (filename == "einkaufsstraße.png") EinkaufsstraßeKh += 8;
-        if (filename == "einkaufsstraße upgrade.png") ShoppincenterKh += 10;
+        if (filename == "einkaufsstraße upgrade.png") ShoppingcenterKh += 10;
         if (filename == "Krankenhaus1.png") KrankenhausWse += 10;
         if (filename == "Fabrik.png") ArbeitsviertelFabrikAuw += 1;
         if (filename == "Kohlekraftwerk1.png") KohlekraftwerkAuw += 0.5;
@@ -468,7 +465,7 @@ function update_score() {
   const Kli = {
     values: [
       { value: KohlekraftwerkKli, weight: 2.5 },
-      { value: UBahnkli, weight: 2.5 },
+      { value: UBahnKli, weight: 2.5 },
       { value: ParkKli, weight: 2.5 },
       { value: SpielplatzKli, weight: 2.5 },
     ],
@@ -476,14 +473,13 @@ function update_score() {
   };
   const Ka = {
     values: [
-      { value: CasinoKa, weight: 1.2 },
-      { value: WohnhäuserKa, weight: 1.2 },
-      { value: ArbeitsviertelFabrikKa, weight: 1.2 },
-      { value: PlattenbauKa, weight: 1.2 },
-      { value: PlattenbausolarKa, weight: 1.2 },
-      { value: ReihenhäuserKa, weight: 1.2 },
-      { value: HochhausKa, weight: 1.2 },
-      { value: WolkenkratzerKa, weight: 1.2 },
+      { value: CasinoKa, weight: 1.4 },
+      { value: WohnhäuserKa, weight: 1.4 },
+      { value: ArbeitsviertelFabrikKa, weight: 1.4 },
+      { value: PlattenbauKa, weight: 1.4 },
+      { value: PlattenbausolarKa, weight: 1.4 },
+      { value: ReihenhäuserKa, weight: 1.4 },
+      { value: WolkenkratzerKa, weight: 1.4 },
     ],
     weight: 11,
   };
@@ -522,7 +518,9 @@ function update_score() {
     weight: 11,
   };
   const Wse = {
-    values: [{ value: KrankenhausWse, weight: 10 }],
+    values: [
+      { value: KrankenhausWse, weight: 10 }
+    ],
     weight: 11,
   };
   const Auw = {
@@ -530,7 +528,6 @@ function update_score() {
       { value: ArbeitsviertelFabrikAuw, weight: 0.7 },
       { value: KohlekraftwerkAuw, weight: 0.7 },
       { value: AtomkraftwerkAuw, weight: 0.7 },
-      { value: WindkraftwerkAuw, weight: 0.7 },
       { value: KrankenhausAuw, weight: 0.7 },
       { value: CasinoAuw, weight: 0.7 },
       { value: KindergartenAuw, weight: 0.7 },
