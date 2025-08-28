@@ -627,7 +627,7 @@ function update_score() {
     weight: 11,
   };
 
-  const Happy = {
+  const Gdm = {
     values: [
       { value: KohlekraftwerkGdm, weight: 0.7 },
       { value: UBahnGdm, weight: 0.7 }
@@ -647,7 +647,7 @@ function update_score() {
     weight: 11,
   };
 
-  const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui];
+  const groups = [Kli, Ka, Guw, Hb, Bus, Kh, Wse, Auw, Iiui, Gdm];
   const overallSustainability = weightedGroupSum(groups);
 
   const groupKli = [Kli];
@@ -668,6 +668,8 @@ function update_score() {
   const overallAuw = weightedGroupSum(groupAuw);
   const groupIiui = [Iiui];
   const overallIiui = weightedGroupSum(groupIiui);
+  const groupGdm = [Gdm];
+  const overallGdm = weightedGroupSum(groupGdm);  
 
   score_display.innerHTML = `Score: ${overallSustainability.toFixed(2)} \n`;
   score_display.innerHTML += `Klima:${overallKli.toFixed(2)} \n`;
@@ -678,6 +680,7 @@ function update_score() {
   score_display.innerHTML += `Hunger:${overallKh.toFixed(2)} \n`;
   score_display.innerHTML += `Arbeit:${overallAuw.toFixed(2)} \n`;
   score_display.innerHTML += `Industrie:${overallIiui.toFixed(2)}\n`;
+  score_display.innerHTML += `Glücklichkeit:${overallGdm.toFixed(2)}\n`;
 
   };
   balance_display.innerHTML = `Budget: ${balance.balance}`;
